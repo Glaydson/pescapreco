@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head 
+         content must come *after* these tags -->
+    <title>Pesca Preço - Consulta de Produtos</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Pesca Preço</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="../indexAdm.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                             role="button" aria-haspopup="true" aria-expanded="false">
+                             Manter Produtos <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="incluir.html">Novo</a></li>
+                                <li><a href="../indexAdm.html#alterarProduto">Alteração</a></li>
+                                <li><a href="../indexAdm.html#excluirProduto">Exclusão</a></li>
+                                <li><a href="listar.html">Listar</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                             role="button" aria-haspopup="true" aria-expanded="false">
+                             Manter Cesta Padrão <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Incluir Produtos</a></li>
+                                <li><a href="#">Remover Produtos</a></li>
+                                <li><a href="#">Listar</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                             role="button" aria-haspopup="true" aria-expanded="false">
+                             Manter Estabelecimentos <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Novo</a></li>
+                                <li><a href="#">Alteração</a></li>
+                                <li><a href="#">Exclusão</a></li>
+                                <li><a href="#">Listar</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                             role="button" aria-haspopup="true" aria-expanded="false">
+                             Manter Pesquisadores <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Novo</a></li>
+                                <li><a href="#">Alteração</a></li>
+                                <li><a href="#">Exclusão</a></li>
+                                <li><a href="#">Listar</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Visualizar Solicitações</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>        
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1>Pesca Preço</h1>
+                    <p style="padding:40px;"></p>
+                    <p>Área do Administrador.</p>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="produtos" class="row row-content">
+                    <div class="col-xs-12">
+                        <h2>Produtos Cadastrados</h2>
+                        <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>Marca</th>
+                                <th>Unidade</th>
+                                <th>Cesta Padrão?</th>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>Macarrão</td>
+                                <td>Fortaleza</td>
+                                <td>1 Kg</td>
+                                <td>Sim</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Sabonete</td>
+                                <td>Palmolive</td>
+                                <td>90 g</td>
+                                <td>Sim</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Leite</td>
+                                <td>Cila</td>
+                                <td>1 litro</td>
+                                <td>Não</td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Feijão</td>
+                                <td>Kicaldo</td>
+                                <td>1 Kg</td>
+                                <td>Sim</td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">             
+                <div>
+                    <p style="padding:10px;"></p>
+                    <p align=center>© Copyright 2016 Pesca Preço</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
