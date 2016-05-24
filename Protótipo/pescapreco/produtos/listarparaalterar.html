@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->
-    <title>Pesca Preço - Administração</title>
+    <title>Pesca Preço - Consulta de Produtos</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,20 +34,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="imagens/pescapreco.png" height=35 width=51></a>
+                    <a class="navbar-brand" href="#">Pesca Preço</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="../indexAdm.html">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                              role="button" aria-haspopup="true" aria-expanded="false">
                              Manter Produtos <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="produtos/incluir.html">Novo</a></li>
-                                <li><a href="#alterarProduto" id="alterarProduto">Alteração</a></li>
-                                <li><a href="#excluirProduto" id="excluirProduto">Exclusão</a></li>
-                                <li><a href="produtos/listar.html">Listar</a></li>
+                                <li><a href="incluir.html">Novo</a></li>
+                                <li><a href="../indexAdm.html#alterarProduto">Alteração</a></li>
+                                <li><a href="../indexAdm.html#excluirProduto">Exclusão</a></li>
+                                <li><a href="listar.html">Listar</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -88,64 +88,11 @@
             </div>
     </nav>        
 
-    <!-- Modal para busca de produto para alteração -->
-    <div id="modalBuscaAlteracao" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Conteúdo do modal-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Busca de Produto </h4>
-                </div>
-                <div class="modal-body">
-                    <form class="form-inline" action="produtos/listarparaalterar.html">
-                    <div class="form-group">
-                      <label class="sr-only" for="nome">Nome do produto</label>
-                      <input type="text" class="form-control input-sm" id="nome" placeholder="Nome do Produto">
-                    </div>
-                    <div class="form-group">
-                      <label class="sr-only" for="marca">Marca</label>
-                      <input type="text" class="form-control input-sm" id="marca" placeholder="Marca do Produto">
-                    </div>
-                    <div class="checkbox">
-                      <label><input type="checkbox">Faz parte da cesta padrão</label>
-                    </div>
-                    <button type="submit" class="btn btn-info btn-sm">Buscar</button>
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para busca de produto para exclusão-->
-    <div id="modalBuscaExclusao" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Conteúdo do modal-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Busca de Produto para Exclusão</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="form-inline" action="produtos/excluir.html">
-                    <div class="form-group">
-                      <label class="sr-only" for="nome">Código do Produto</label>
-                      <input type="text" class="form-control input-sm" id="nome" placeholder="Informe o código do produto">
-                    </div>
-                    <button type="submit" class="btn btn-info btn-sm">Buscar</button>
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <header class="jumbotron">
         <div class="container">
             <div class="row">
                 <div>
-                    <h1><img src="imagens/pescapreco.png" height=70 width=100>Pesca Preço</h1>
+                    <h1>Pesca Preço</h1>
                     <p style="padding:40px;"></p>
                     <p>Área do Administrador.</p>
                 </div>
@@ -154,6 +101,54 @@
             </div>
         </div>
     </header>
+
+    <div class="container">
+        <div id="produtos" class="row row-content">
+                    <div class="col-xs-12">
+                        <h2>Resultado da Consulta de Produtos</h2>
+                        <h3>Clique no código de um produto para alterá-lo</h3>
+                        <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>Marca</th>
+                                <th>Unidade</th>
+                                <th>Cesta Padrão?</th>
+                            </tr>
+                            <tr>
+                                <td><a href="alterar.html">001</a></td>
+                                <td>Macarrão</td>
+                                <td>Fortaleza</td>
+                                <td>1 Kg</td>
+                                <td>Sim</td>
+                            </tr>
+                            <tr>
+                                <td><a href="alterar.html">002</a></td>
+                                <td>Sabonete</td>
+                                <td>Palmolive</td>
+                                <td>90 g</td>
+                                <td>Sim</td>
+                            </tr>
+                            <tr>
+                                <td><a href="alterar.html">003</a></td>
+                                <td>Leite</td>
+                                <td>Cila</td>
+                                <td>1 litro</td>
+                                <td>Não</td>
+                            </tr>
+                            <tr>
+                                <td><a href="alterar.html">004</a></td>
+                                <td>Feijão</td>
+                                <td>Kicaldo</td>
+                                <td>1 Kg</td>
+                                <td>Sim</td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -165,20 +160,12 @@
             </div>
         </div>
     </footer>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#alterarProduto").click(function(){
-              $("#modalBuscaAlteracao").modal();
-            });
-            $("#excluirProduto").click(function(){
-              $("#modalBuscaExclusao").modal();
-            });
-        });
-    </script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
